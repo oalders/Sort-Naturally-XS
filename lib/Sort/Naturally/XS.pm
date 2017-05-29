@@ -130,7 +130,7 @@ and C<setlocale> has no effect on C<ncmp> and C<nsort>. The following example de
   use POSIX;
   use Sort::Naturally::XS;
 
-  my @list = ('a.'.'c', 'A'..'B');
+  my @list = ('a'..'c', 'A'..'B');
 
   my @result_std = sort @list;
   my @result_ncmp = sort {ncmp($a, $b)} @list;
@@ -155,7 +155,7 @@ keyword argument:
 
   use Sort::Naturally::XS qw/sorted/;
 
-  my $list = ['a.'.'c', 'A'..'B'];
+  my $list = ['a'..'c', 'A'..'B'];
 
   my $result_us = sorted($list, locale => 'en_US.utf8');
   # $result_us contains a, A, b, B, c, C
